@@ -1,0 +1,35 @@
+{% extends "links/main.html" %}
+{% block content %}
+<div class="wrapper col-12 mt-5 ml-1">
+    <!--Посмотреть -->
+        <div class="element">
+            <h2>Посмотреть</h2>
+            <div class="dropdown-divider"></div>
+            <div class="list">
+                <ul>
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://www.youtube.com/watch?v=KJqivgmaMVw">
+                            О компании
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    <!--Почитать-->
+        <div class="element">
+            <h2>Почитать</h2>
+            <div class="dropdown-divider"></div>
+            <div class="list">
+                <ul>
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://liwest.ru/about-us/">
+                            О компании
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</div>
+{% endblock %}
