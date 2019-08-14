@@ -2,7 +2,8 @@
 
 {% block content %}
 <div class="wrapper col-12 mt-5 ml-1">
-    <!--Посмотреть -->
+
+        <!--Посмотреть -->
         <div class="element">
             <h2>Посмотреть</h2>
             <div class="dropdown-divider"></div>
@@ -13,11 +14,55 @@
                             О компании
                         </button>
                     </li>
+
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link=" https://youtu.be/bEIDg1QJQtw">
+                            Возможности бизнеса с «Ли Вест»
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://www.youtube.com/watch?v=1p0u_Cp8A20">
+                            Эликсир «Лаочжан»
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://www.youtube.com/watch?v=w2yrj-Lm-9k">
+                            Продукция («Домашняя аптечка»)
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://www.youtube.com/watch?v=rqMhmrlsCJA">
+                            Фруктовые батончики B.B.L.W.
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://www.youtube.com/watch?v=MTHC6sGIfBI">
+                            Косметика
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://www.youtube.com/watch?v=AIl7i-i0WWw">
+                            Молодежная косметика LiYoung
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://www.youtube.com/watch?v=k44CSkhs0es">
+                            Усадьба «Лузарина»
+                        </button>
+                    </li>
+
+
                 </ul>
             </div>
         </div>
 
-    <!--Почитать-->
+        <!--Почитать-->
         <div class="element">
             <h2>Почитать</h2>
             <div class="dropdown-divider"></div>
@@ -28,11 +73,65 @@
                             О компании
                         </button>
                     </li>
+
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://liwest.ru/tcm/">
+                            О Китайской медицине
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://liwest.ru/business/">
+                            Бизнес
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link=" https://lk.liwest.ru/wp-content/uploads/2019/07/marketing_lk.pdf">
+                            Маркетинг-план
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://lk.liwest.ru/wp-content/uploads/2019/04/product_katalog_liwest_2019.pdf">
+                            Каталог продукции
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://lk.liwest.ru/wp-content/uploads/2019/07/cosmetics_catalog_compressed.pdf">
+                            Каталог косметики
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://lk.liwest.ru/wp-content/uploads/2018/07/east_table.pdf">
+                            Изумрудная Скрижаль Востока
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://liwest.ru/entries_main/">
+                            Статьи
+                        </button>
+                    </li>
+
+                    <li>
+                        <button data-toggle="modal" data-target="#exampleModal" data-link=" http://luzarina.ru/">
+                            Лузарина
+                        </button>
+                    </li>
+
                 </ul>
             </div>
         </div>
-</div>
+    </div>
 
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
  <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -94,5 +193,34 @@
         </div>
     </div>
 
+
+<!--Modal script-->
+<script>
+        $('#exampleModal').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget);
+            var link = button.data('link');
+            var title = button.text();
+            var whatsapp = "whatsapp://send?text=" + link;
+            var telegram = "tg://msg?text=" + link;
+            var viber = "viber://forward?text=" + link;
+
+            var modal = $(this);
+
+            modal.find('.modal-title').text(title);
+            modal.find('.modal-body #link').val(link);
+            modal.find('#golink').attr("href", link);
+            modal.find('#whatsapp a').attr("href", whatsapp);
+            modal.find('#telegram a').attr("href", telegram);
+            modal.find('#viber a').attr("href", viber);
+        });
+
+        $(document).on("click", "#copy",
+            function() {
+                link = document.getElementById("link");
+                link.select();
+                document.execCommand('copy');
+            });
+
+    </script>
 
 {% endblock %}
