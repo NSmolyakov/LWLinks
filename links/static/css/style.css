@@ -9,12 +9,13 @@ a {
 }
 
 body {
-    background: #2B4B98 url(img/main_bg.jpg) no-repeat;
+    background: #2B4B98 url(/static/img/main_bg.jpg) no-repeat;
 }
+
 
 @media screen and (max-width:768px) {
     body {
-        background: url(img/main_bg768.jpg);
+        background: url(/static/img/main_bg768.jpg);
     }
 }
 

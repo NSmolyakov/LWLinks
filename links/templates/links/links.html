@@ -1,4 +1,5 @@
 {% extends "links/main.html" %}
+
 {% block content %}
 <div class="wrapper col-12 mt-5 ml-1">
     <!--Посмотреть -->
@@ -16,7 +17,6 @@
             </div>
         </div>
 
-
     <!--Почитать-->
         <div class="element">
             <h2>Почитать</h2>
@@ -32,4 +32,67 @@
             </div>
         </div>
 </div>
+
+
+ <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Новости</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times; Закрыть</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label for="link" class="col-form-label">Ссылка:</label>
+                            <input type="text" class="form-control" id="link" readonly />
+                            <a id="golink" href="#" class="btn btn-primary" target="_blanck">Перейти</a>
+                        </div>
+
+
+                        <div class="share">
+                            <h4>Поделиться:</h4>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+
+                                <div id="telegram" class="col-3 text-center text_style">
+                                    <a href="#">
+                                        <img src="/static/img/Vector.svg" alt="telegram">
+                                        Telegram
+                                    </a>
+                                </div>
+
+                                <div id="whatsapp" class="col-3 text-center text_style">
+                                    <a href="#">
+                                        <img src="/static/img/WhatsApp.svg" alt="WhatsApp">
+                                        WhatsApp
+                                    </a>
+                                </div>
+
+                                <div id="viber" class="col-3 text-center text_style">
+                                    <a href="#">
+                                        <img src="/static/img/Viber.svg" alt="Viber">
+                                        Viber
+                                    </a>
+                                </div>
+
+                                <div id="copy" class="col-3 text-center text_style">
+                                    <img src="/static/img/icon.svg" alt="copy">
+                                    <span> Копировать</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 {% endblock %}
