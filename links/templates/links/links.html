@@ -9,61 +9,21 @@
             <div class="dropdown-divider"></div>
             <div class="list">
                 <ul>
+                    {% for link in watch %}
                     <li>
-                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://www.youtube.com/watch?v=KJqivgmaMVw">
-                            О компании
+                        <button data-toggle="modal" data-target="#exampleModal" data-link="{{link.link}}">
+                            {{link.title}}
                         </button>
                     </li>
 
-                    <li>
-                        <button data-toggle="modal" data-target="#exampleModal" data-link=" https://youtu.be/bEIDg1QJQtw">
-                            Возможности бизнеса с «Ли Вест»
-                        </button>
-                    </li>
-
-                    <li>
-                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://www.youtube.com/watch?v=1p0u_Cp8A20">
-                            Эликсир «Лаочжан»
-                        </button>
-                    </li>
-
-                    <li>
-                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://www.youtube.com/watch?v=w2yrj-Lm-9k">
-                            Продукция («Домашняя аптечка»)
-                        </button>
-                    </li>
-
-                    <li>
-                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://www.youtube.com/watch?v=rqMhmrlsCJA">
-                            Фруктовые батончики B.B.L.W.
-                        </button>
-                    </li>
-
-                    <li>
-                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://www.youtube.com/watch?v=MTHC6sGIfBI">
-                            Косметика
-                        </button>
-                    </li>
-
-                    <li>
-                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://www.youtube.com/watch?v=AIl7i-i0WWw">
-                            Молодежная косметика LiYoung
-                        </button>
-                    </li>
-
-                    <li>
-                        <button data-toggle="modal" data-target="#exampleModal" data-link="https://www.youtube.com/watch?v=k44CSkhs0es">
-                            Усадьба «Лузарина»
-                        </button>
-                    </li>
-
+                    {% endfor %}
 
                 </ul>
             </div>
         </div>
 
         <!--Почитать-->
-        <div class="element">
+     <div class="element">
             <h2>Почитать</h2>
             <div class="dropdown-divider"></div>
             <div class="list">
@@ -121,6 +81,10 @@
                             Лузарина
                         </button>
                     </li>
+
+                </ul>
+            </div>
+        </div>
 
                 </ul>
             </div>

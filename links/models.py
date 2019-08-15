@@ -5,6 +5,7 @@ from django.db import models
 
 class Link(models.Model):
     title = models.CharField(max_length=120)
+    number = models.PositiveSmallIntegerField()
     link = models.URLField()
     read = models.BooleanField()
     watch = models.BooleanField()
