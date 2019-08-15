@@ -6,3 +6,6 @@ def index(request):
     watch = Link.objects.filter(watch=True).order_by('-number')
     return render(request, 'links/links.html', context={'watch':watch})
 
+    # read = Link.objects.filter(read=True).order_by('-number')
+    # return render(request, 'links/links.html', context={'read':read})
+
