@@ -2,4 +2,4 @@
 /links/__pycache__
 /links/migrations
 
-.sqlite3
+db.sqlite3
